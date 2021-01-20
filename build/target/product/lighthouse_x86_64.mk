@@ -1,5 +1,4 @@
-# Copyright (C) 2015 The CyanogenMod Project
-#           (C) 2017-2018 The LineageOS Project
+# Copyright (C) 2018-2020 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -13,5 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Rules for QCOM targets
-include $(TOPDIR)vendor/fuse/build/core/qcom_target.mk
+$(call inherit-product, build/target/product/aosp_x86_64.mk)
+
+include vendor/fuse/build/target/product/fuse_generic_target.mk
+
+PRODUCT_NAME := fuse_x86_64
